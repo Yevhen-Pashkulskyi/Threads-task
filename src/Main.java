@@ -6,15 +6,15 @@ public class Main {
         FruitThread fruitThread = new FruitThread();
         VegetableTrhread vegetableTrhread = new VegetableTrhread();
 
-        fruitThread.run();
-        vegetableTrhread.run();
+        vegetableTrhread.start();
+        fruitThread.start();
 
-//        try {
-//            fruitThread.join();
-//            vegetableTrhread.join();
-//        }catch (InterruptedException e){
-//            e.printStackTrace();
-//        }
+        try {
+            fruitThread.join();
+            vegetableTrhread.join();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
         System.out.println("Програма завершена");
     }
 }
