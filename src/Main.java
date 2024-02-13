@@ -12,7 +12,7 @@ public class Main {
         try {
             fruitThread.join();
             vegetableTrhread.join();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println("Програма завершена");

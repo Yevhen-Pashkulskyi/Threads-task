@@ -1,17 +1,15 @@
 package products;
 
-import print.PrintProducts;
-
-public class FruitThread extends Thread{
+public class FruitThread extends Thread {
     private String[] fruits = {"Яблуко", "Банан", "Апельсин", "Груша", "Лимон"};
 
     public void run() {
         for (String fruit : fruits) {
             System.out.println(fruit);
             try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("Fruit interrupted");
             }
         }
     }
